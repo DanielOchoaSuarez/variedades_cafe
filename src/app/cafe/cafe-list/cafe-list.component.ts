@@ -8,7 +8,10 @@ import { CafeServiceService } from '../cafe-service.service';
   styleUrls: ['./cafe-list.component.css'],
 })
 export class CafeListComponent implements OnInit {
+  cafeOrigen: number = 0;
+  cafeBlend: number = 0;
   listaCafe: Array<Cafe> = [];
+
   constructor(private cafeService: CafeServiceService) {}
 
   ngOnInit() {
@@ -18,6 +21,14 @@ export class CafeListComponent implements OnInit {
   getListaCafe() {
     this.cafeService.getCafes().subscribe((cafes) => {
       this.listaCafe = cafes;
+
+      this.listaCafe.forEach((element) => {
+        if (element.tipo === 'Blend') {
+          this.cafeBlend++;
+        } else {
+          this.cafeOrigen++;
+        }
+      });
     });
   }
 }
