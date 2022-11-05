@@ -1,8 +1,23 @@
 <h1>cafe-list works!</h1>
 
-<div *ngFor="let cafe of listaCafe">
-  <p>{{ cafe.id }}</p>
-  <p>{{ cafe.nombre }}</p>
-  <p>{{ cafe.tipo }}</p>
-  <p>{{ cafe.region }}</p>
+<div class="container">
+  <table class="table table-striped">
+    <caption>Contact us: +57 3102105253 - info@elaromamagico.co - @elaromamagico</caption>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Región</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cafe of listaCafe">
+        <td>{{ cafe.id }}</td>
+        <td>{{ cafe.nombre }}</td>
+        <td>{{ cafe.tipo }}</td>
+        <td>{{ cafe.region }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
