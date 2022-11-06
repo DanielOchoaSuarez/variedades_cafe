@@ -5,7 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { CafeListComponent } from './cafe-list.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { CafeServiceService } from '../cafe-service.service';
+import { CafeServiceService } from '../cafe.service';
 import { Cafe } from '../cafe';
 
 describe('CafeListComponent', () => {

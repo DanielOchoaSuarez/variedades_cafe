@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cafe } from '../cafe';
-import { CafeServiceService } from '../cafe-service.service';
+import { CafeServiceService } from '../cafe.service';
 
 @Component({
   selector: 'app-cafe-list',
